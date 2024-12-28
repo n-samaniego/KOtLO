@@ -1,0 +1,181 @@
+/* Global Reset */
+html, body {
+    font-family: 'Times New Roman', Times, serif;  /* Fallback font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #130404;  /* Dark background */
+    color: #d7be69;  /* Text color */
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+}
+
+body {
+    width: 100%;
+    font-size: 1.25rem;  /* Increased font size for better readability */
+}
+
+/* Header Styling */
+header {
+    background: #111511;
+    color: #d7be69;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.25rem;  /* Set header font size to 1.25rem */
+}
+
+/* Headings and Links */
+h1, h2, h3, h4, h5, h6 {
+    color: #d7be69;
+    font-family: 'Times New Roman', Times, serif; /* Ensure headings also use the same font */
+}
+
+/* Links */
+a {
+    color: #d7be69;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bda356; /* Slightly darker on hover */
+}
+
+/* Main Container for Posts */
+main {
+    max-width: 100%;  /* Remove fixed width limit to ensure it stays within the viewport */
+    margin: 2rem auto;  /* Center vertically and horizontally */
+    padding: 2rem;
+    width: 85%;  /* Slight margin from window edges */
+}
+
+/* Unordered List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List Item - Post Styling */
+li {
+    margin: 2rem 0;  /* More space between posts */
+}
+
+/* Individual Post Item */
+.post-list-item {
+    padding: 1.5rem;
+    border: 1px solid #444;  /* Darker border to blend with theme */
+    border-radius: 12px;  /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* More pronounced shadow */
+    background-color: #111511;  /* Green background for posts, matches the header */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.post-list-item:hover {
+    transform: translateY(-8px);  /* Slight lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Make entire post clickable */
+.post-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-link:hover .post-list-item {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Post Title */
+.post-title {
+    display: block;
+    font-size: 1.8rem;  /* Larger for emphasis */
+    margin-bottom: 0.5rem;
+}
+
+/* Post Date */
+.post-date {
+    display: block;
+    margin: 0.3rem 0 1rem;
+    font-size: 1rem;
+    color: #b4a07a;  /* Muted tone for subtlety */
+}
+
+/* Post Excerpt */
+.post-excerpt {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+    color: #d7be69;  /* Match overall theme */
+}
+
+/* Pagination Styling */
+.pagination {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.pagination-link, .pagination a {
+    margin: 0 8px;
+    padding: 6px 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    color: #bda356;  /* Slightly lighter/darker for pagination links */
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination-link:hover, .pagination a:hover {
+    background-color: #2c2c2c;
+}
+
+/* Button Styling - Compact version */
+.button {
+    display: inline-block;
+    padding: 8px 16px;  /* Reduced padding for a more compact button */
+    background-color: #111511;  /* Your chosen color */
+    color: #d7be69;  /* Gold text */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;  /* Set button font size to 1.25rem */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #210606;  /* Brighter red for more contrast */
+}
+
+.button:focus {
+    outline: 3px solid #fff;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Box-sizing for all elements */
+* {
+    box-sizing: border-box;  /* Ensures padding and borders do not overflow elements */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;  /* Prevents horizontal scrolling */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px; /* Add small horizontal padding */
+}
