@@ -1,0 +1,31 @@
+---
+layout: default
+title: My Story
+---
+
+<h2>Recent Posts</h2>
+
+<ul>
+    {% if paginator.posts.size == 0 %}
+        <p>No posts available.</p>
+    {% else %}
+        {% for post in paginator.posts | sort "date" | sort "title" | reverse %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="post-link">
+            <li class="post-list-item">
+                <h3 class="post-title">{{ post.title }}</h3>
+                <small class="post-date">{{ post.date | date: "%B %d, %Y" }}</small>
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            </li>
+        </a>
+        {% endfor %}
+    {% endif %}
+</ul>
+
+<div class="pagination">
+    {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="pagination-link">Previous</a>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="pagination-link">Next</a>
+    {% endif %}
+</div>
